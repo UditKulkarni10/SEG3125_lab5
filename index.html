@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width = device-width, initial-scale=1, height= device-height" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Lobster&display=swap" rel="stylesheet" />
+</head>
+
+<body style="position: relative" data-spy="scroll" data-target="#ScrollNavbar" data-offset="1">
+    <div class="container-fluid">
+        <div>
+            <h1>Logo + Header</h1>
+        </div>
+        <div class="row" style="margin-top: 20px">
+            <div class="col-2">
+                <div class="row">
+                    <div class="col">
+                        <nav id="ScrollNavbar" class="navbar navbar-light">
+                            <ul class="nav nav-pills flex-column" style="position: relative">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#section1">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#section2">Location</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#section3">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#section4">Our Team</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#section5">Reviews</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 200px; text-align: center">
+                    <div class="col">
+                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal"
+                            data-target="#myModal">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="title">Book An Appointment</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="forms">
+                                    <!-- Input and form code adapted from https://getbootstrap.com/docs/4.0/components/forms/ -->
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <h5>Personal Information</h5>
+                                            <br />
+                                            <form class="form-floating">
+                                                <div class="form-floating">
+                                                    <label for="fnameInput">First name:</label>
+                                                    <input type="text" class="form-control" id="fnameInput"
+                                                        placeholder="Enter first name" required />
+                                                    <div class="valid-feedback" hidden>looks good</div>
+                                                    <div class="invalid-feedback" hidden></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="lnameInput">Last name:</label>
+                                                    <input type="text" class="form-control" id="lnameInput"
+                                                        placeholder="Enter last name" required />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="emailInput">Email</label>
+                                                    <input type="email" class="form-control" id="emailInput"
+                                                        aria-describedby="emailHelp" placeholder="Enter email"
+                                                        required />
+                                                    <small id="emailHelp" class="form-text text-muted">We'll never share
+                                                        your email with anyone
+                                                        else.</small>
+                                                </div>
+                                                <br>
+                                                <h5>Payment Information</h5>
+                                                <br>
+                                                <div class="form-group" id="cardNumField">
+                                                    <label for="cardNumber">
+                                                        Enter your credit card number</label>
+                                                    <input type="text" class="form-control" id="cardNumber"
+                                                        placeholder="XXXX-XXXX-XXXX-XXXX" />
+                                                </div>
+                                                <div class="form-group" id="cardCVVField">
+                                                    <label for="CVVNumber"> CVV </label>
+                                                    <input type="text" class="form-control" id="CVVNumber"
+                                                        placeholder="***" />
+                                                </div>
+                                                <div class="form-group" id="expirationDate">
+                                                    <label> Expiration Date</label>
+                                                    <input type="text" class="form-control" id="expiryDate"
+                                                        placeholder="mm/yy">
+                                                </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h5>Service and Date</h5>
+                                            <br />
+                                            <div class="form-group">
+                                                <label for="serviceSelect">Select the service</label>
+                                                <select class="form-select" id="serviceSelect">
+                                                    <option>Hair Cut</option>
+                                                    <option>Hair Styling</option>
+                                                    <option>Hair Colouring</option>
+                                                    <option>Beard Styling</option>
+                                                    <option>Perm</option>
+                                                    <option>Hair Treatments</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="barberSelect">Barber</label>
+                                                <select class="form-select" id="barberSelect">
+                                                    <option>Caleb</option>
+                                                    <option>Jai</option>
+                                                    <option>Jonathan</option>
+                                                    <option>Udit</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <br />
+                                                <label for="date">Select a Date: </label>
+                                                <input type="date" id="date" name="booking" min="2022-01-01"
+                                                    max="2022-12-31" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="appt">Select a time:</label>
+                                                <input type="time" id="appt" name="appt" min="9:00" max="18:00"
+                                                    required />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br />
+                                    <div style="text-align: center">
+                                        <button type="submit" id="payment" class="btn btn-light btn-sm">
+                                            Confirm
+                                        </button>
+                                    </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10">
+                <div data-spy="scroll" data-target="#ScrollNavbar" data-offset="1" class="content-container">
+                    <div id="section1" class="page-container">
+                        <h4>Welcome to Basement Barbers!</h4>
+                        <p>We are a barbershop located inside the University of Ottawa</p>
+                        <!-- Carousel code adapted from https://www.w3schools.com/bootstrap4/bootstrap_carousel.asp -->
+                        <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+                            <ul class="carousel-indicators">
+                                <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#imageCarousel" data-slide-to="1"></li>
+                                <li data-target="#imageCarousel" data-slide-to="2"></li>
+                            </ul>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="d-flex justify-content-center">
+                                        <img src="./assets/slide-1.jpeg" width="1300" height="500" />
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex justify-content-center">
+                                        <img src="./assets/slide-2.jpeg" width="1300" height="500" />
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex justify-content-center">
+                                        <img src="./assets/slide-3.jpeg" width="1300" height="500" />
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#imageCarousel" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#imageCarousel" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="section2" class="page-container">
+                        <h4>Location</h4>
+                        <br />
+                        <div class="row">
+                            <iframe class="col-sm-8" width="700" height="500" style="border: 0" loading="lazy"
+                                allowfullscreen
+                                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJK5TUxgcFzkwRFzelEm71Igg&key=AIzaSyA9s689pR-VQQU_1MXHajx7yr6k18sXSu8"></iframe>
+                            <div class="col-sm-4" style="
+                    background-color: black;
+                    height: 500px;
+                    border: 1px solid black;
+                  ">
+                                <br />
+                                <h5>Store Hours:</h5>
+                                <br />
+                                <p>Monday: 11:30AM - 8:00PM</p>
+                                <br />
+                                <p>Tuesday: 11:30AM - 8:00PM</p>
+                                <br />
+                                <p>Wednesday: 11:30AM - 8:00PM</p>
+                                <br />
+                                <p>Thursday: 11:30AM - 8:00PM</p>
+                                <br />
+                                <p>Friday: 11:30AM - 8:00PM</p>
+                                <br />
+                                <p>Saturday: 1:00PM - 8:00PM</p>
+                                <br />
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="section3" class="page-container">
+                        <h4>Pricing</h4>
+                        <br />
+                        <!-- change all grid colour to white -->
+                        <div class="row">
+                            <div class="col-sm-4" style="background-color: black; border: 1px solid black">
+                                <div class="serviceDiv">
+                                    <img src="./assets/scissors.jpeg" width="50" length="50" />
+                                    <h5>Hair Cuts</h5>
+                                    <h4>$25</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-4" style="background-color: black; border: 1px solid black">
+                                <div class="serviceDiv">
+                                    <img src="./assets/hair-styling.jpeg" width="50" length="50" />
+                                    <h5>Hair Styling</h5>
+                                    <h4>$15</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-4" style="background-color: black; border: 1px solid black">
+                                <div class="serviceDiv">
+                                    <img src="./assets/hair-colour.jpeg" width="50" length="50" />
+                                    <h5>Hair Colouring</h5>
+                                    <h4>$20</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4" style="background-color: black; border: 1px solid black">
+                                <div class="serviceDiv">
+                                    <img src="./assets/beard.jpeg" width="50" length="50" />
+                                    <h5>Beard Styling</h5>
+                                    <h4>$10</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-4" style="background-color: black; border: 1px solid black">
+                                <div class="serviceDiv">
+                                    <img src="./assets/perm.jpeg" width="50" length="50" />
+                                    <h5>Perm</h5>
+                                    <h4>$30</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-4" style="background-color: black; border: 1px solid black">
+                                <div class="serviceDiv">
+                                    <img src="./assets/hair-treatments.jpeg" width="50" length="50" />
+                                    <h5>Hair Treatments</h5>
+                                    <h4>$30</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="section4" class="page-container">
+                        <h4>Our Team</h4>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-6" style="background-color: black; border: 1px solid black">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div id="profile" class="memberDiv">
+                                            <img src="assets/jai.jpeg" alt="" width="100" length="100" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="memberDiv">
+                                            <h5>Jai Chauhan</h5>
+                                            <p>
+                                                A co-owner of Basement Barbers, Jai honed his skills
+                                                in LA as an actor, secretly cutting hair for
+                                                well-known celebrities. Today he cuts hair in a
+                                                basement, in Ottawa.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" style="background-color: black; border: 1px solid black">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div id="profile" class="memberDiv">
+                                            <img src="assets/jon.jpeg" alt="" width="100" length="100" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="memberDiv">
+                                            <h5>Jonathan Lam</h5>
+                                            <p>
+                                                AKA Sensei J, self-taught barber, well known on social
+                                                media for his haircut tutorials, clean cuts and bird
+                                                cosplays. Check him out at @senseiJ on Instagram and
+                                                Youtube.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6" style="background-color: black; border: 1px solid black">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div id="profile" class="memberDiv">
+                                            <img src="assets/udit.jpeg" alt="" width="100" length="100" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="memberDiv">
+                                            <h5>Udit Kulkarni</h5>
+                                            <p>
+                                                A co-owner of Basement Barbers, Udit has no arms and
+                                                legs but makes it work. Good luck booking him, this
+                                                man is fully booked for the next year.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" style="background-color: black; border: 1px solid black">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div id="profile" class="memberDiv">
+                                            <img src="assets/caleb.jpeg" alt="" width="100" length="100" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="memberDiv">
+                                            <h5>Caleb Wong</h5>
+                                            <p>
+                                                Looks like a baby, is a baby. Caleb is the baby of the
+                                                crew. A barber trainee, learning from the best in
+                                                Ottawa. Cut him some slack when he messes up your
+                                                hair.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+
+                    <div id="section5" class="page-container">
+                        <h2>Reviews</h2>
+                        <!-- create a carousel of cards, each card having a star rating and the person's comments
+                have around 6 cards, 3 of which will be displayed at each time. Also have arrows for navigation that switch between
+                the 2 sets of cards. If possible use JS to create the cards and have the html of this section change on page load.-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
