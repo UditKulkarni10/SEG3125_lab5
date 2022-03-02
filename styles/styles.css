@@ -8,10 +8,11 @@ html, body {
 }
 
 .content-container {
-  height: 1000px;
+  height: 900px;
   overflow-y: scroll;
   width:inherit;
   overflow-x: hidden;
+  resize: both;
 }
 
 .page-container {

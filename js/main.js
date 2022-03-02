@@ -4,6 +4,7 @@ var onResize = function() {
     $("body").css("padding-top", ($(".fixed-top").height() - 20));
   };
 
+
   $(window).resize(onResize);
 
   $(function() {
