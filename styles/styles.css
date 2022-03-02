@@ -2,14 +2,12 @@ html, body {
   position: relative;
   height: 100%;
   margin: 0;
-  overflow: hidden;
 }
 
 .container {
 }
 
 .content-container {
-  height: 60%;
   overflow-y: scroll;
   width:inherit;
   overflow-x: hidden;
